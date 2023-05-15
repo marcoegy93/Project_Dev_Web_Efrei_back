@@ -34,14 +34,30 @@ namespace backend_webProject_2023.Controllers
             return this._userService.getUserList();
         }
 
+        [HttpGet("listClient/")]
+        public List<User> getClientList()
+        {
+            return this._userService.getClientList();
+        }
+        [HttpGet("listRapporteur/")]
+        public List<User> getRapporteurList()
+        {
+            return this._userService.getRapporteurList();
+        }
+        [HttpGet("listDev/")]
+        public List<User> getDevList()
+        {
+            return this._userService.getDevList();
+        }
+
         [HttpGet("deleteUser/{idUser}")]
-        public void getUserList(String idUser)
+        public void deleteUser(String idUser)
         {
            this._userService.deleteUser(idUser);
         }
 
         [HttpPost("addUser/")]
-        public void getUserList(User user)
+        public void addUser(User user)
         {
             this._userService.addUser(user);
         }

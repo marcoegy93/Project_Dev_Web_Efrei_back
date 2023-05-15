@@ -15,6 +15,9 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
 builder.Services.AddTransient<IUserService, UserService>();
+builder.Services.AddTransient<IDevService, DevService>();
+builder.Services.AddTransient<IRapporteurService, RapporteurService>();
+
 
 builder.Services.AddSwaggerGen();
 
