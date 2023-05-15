@@ -28,8 +28,8 @@ namespace backend_webProject_2023.Controllers
             this._devService.updateTicket(ticket);
         }
 
-        [HttpGet("deleteTicket/")]
-        public void deleteTicket([FromBody] int idTicket)
+        [HttpGet("deleteTicket/{idTicket}")]
+        public void deleteTicket(int idTicket)
         {
             this._devService.deleteTicket(idTicket);
         }
